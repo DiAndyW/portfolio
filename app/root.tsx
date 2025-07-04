@@ -9,6 +9,7 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import { Header } from "./components/header";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -23,6 +24,13 @@ export const links: Route.LinksFunction = () => [
   },
 ];
 
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "Andy Wang" },
+    { name: "Andy Wang Portfolio Website", content: "This is Andy Wang's Porfolio Website!" },
+  ];
+}
+
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
@@ -33,6 +41,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+        <Header />
         {children}
         <ScrollRestoration />
         <Scripts />

@@ -1,16 +1,60 @@
 import { AboutSection } from "~/components/aboutSection";
 import { ExperienceSection } from "~/components/experienceSection";
 import { ProjectSection } from "~/components/projectSection";
+import { useState, useEffect } from 'react';
 
-export default function Home() {
+const Home = () => {
+  const [activeSection, setActiveSection] = useState('about');
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        rootMargin: '-50% 0px -50% 0px',
+        threshold: 0
+      }
+    );
+
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => observer.observe(section));
+
+    return () => {
+      sections.forEach(section => observer.unobserve(section));
+    };
+  }, []);
+
+  const navItems = [
+    { id: 'about', label: 'About' },
+    { id: 'experience', label: 'Experience' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'misc', label: 'Misc' }
+  ];
+
   return (
     <div className="flex justify-center">
       <div className="flex w-4/5 items-start">
-        <aside className="p-4 w-1/5 flex-shrink-0">
+        <aside className="p-4 w-1/5 flex-shrink-0 sticky top-24">
           <ul className="space-y-2">
-            <li><a href="#about" className="hover:text-[#5d97b3] text-xl">About</a></li>
-            <li><a href="#experience" className="hover:text-[#5d97b3] text-xl">Experience</a></li>
-            <li><a href="#projects" className="hover:text-[#5d97b3] text-xl">Projects</a></li>
+            {navItems.map(item => (
+              <li key={item.id}>
+                <a 
+                  href={`#${item.id}`}
+                  className={`hover:text-[#5d97b3] text-xl transition-all duration-200 ${
+                    activeSection === item.id 
+                      ? 'font-bold text-[#5d97b3]' 
+                      : ''
+                  }`}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
           </ul>
         </aside>
         
@@ -24,6 +68,9 @@ export default function Home() {
           <section id="projects">
             <ProjectSection />
           </section>
+          <section id="misc">
+            <ProjectSection />
+          </section>
         </main>
         
         <div className="w-1/5 flex-shrink-0 p-4">
@@ -33,3 +80,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home;

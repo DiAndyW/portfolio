@@ -3,8 +3,8 @@ import { Link } from "react-router";
 //add some kind of parameter to the link so then the tab gets highlighted
 export function Header() {
     return (
-        <div className="flex justify-center sticky top-0 z-50">
-            <header className="items-center border rounded-xl p-4 w-4/5 mt-4">
+        <div className="flex justify-center sticky top-0">
+            <header className="items-center border rounded-xl p-4 w-4/5 mt-4 bg-[#000000]">
                 <div className="flex justify-between">
                     <button className="">
                         <Link to="/">

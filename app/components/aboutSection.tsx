@@ -1,7 +1,7 @@
 export function AboutSection() {
-    return (<>
-        <div className="flex flex-col self-center items-center justify-center">
-            <div className="w-3/5 mt-8 font-normal">
+    return (
+        <div className="flex self-center items-center">
+            <div className="mt-8 font-normal">
                 <h1 className="text-5xl p-4">
                 Hi! I'm Andy Wang
                 </h1>
@@ -25,6 +25,6 @@ export function AboutSection() {
                 </p>
             </div>
         </div>
-    </>);
+    );
     
 }

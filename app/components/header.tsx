@@ -12,17 +12,13 @@ export function Header() {
                         </Link>
                     </button>
 
-                    <div>
-                        <button className="py-2 px-4">
-                            <Link to="/experience">
-                                Experience
-                            </Link>
-                        </button>
-                        <button className="py-2 px-4">
-                            <Link to="/projects">
-                                Projects
-                            </Link>
-                        </button>
+                    <div className="flex flex-row">
+                        <a href='https://github.com/DiAndyW'>
+                            <img src='../../assets/github-mark.svg' className='w-[45px]' />
+                        </a>
+                        <a href='https://www.linkedin.com/in/di-xuan-wang/'>
+                            <img src='../../assets/LI-In-Bug.png' className='w-[53px]' />
+                        </a>
                         <button className="py-2 px-4">
                             <Link to="/about">
                                 About

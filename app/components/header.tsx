@@ -4,26 +4,22 @@ import { Link } from "react-router";
 export function Header() {
     return (
         <div className="flex justify-center sticky top-0">
-            <header className="items-center border rounded-xl p-4 w-4/5 mt-4 bg-[#000000]">
-                <div className="flex justify-between">
-                    <button className="">
-                        <Link to="/">
+            <header className="items-center border rounded-xl w-4/5 mt-4 bg-[#000000]">
+                <div className="grid grid-cols-12">
+                {/* <div className="flex justify-between"> */}
+                    <button className="col-span-2">
+                        <Link to="/" className="text-[28px]">
                             Andy Wang
                         </Link>
                     </button>
 
-                    <div className="flex flex-row">
-                        <a href='https://github.com/DiAndyW'>
-                            <img src='../../assets/github-mark.svg' className='w-[45px]' />
+                    <div className="col-start-11 col-span-2 flex items-center justify-end gap-2">
+                        <a href='https://github.com/DiAndyW' className="m-2 w-1/5">
+                            <img src='../../assets/github-mark.png' />
                         </a>
-                        <a href='https://www.linkedin.com/in/di-xuan-wang/'>
-                            <img src='../../assets/LI-In-Bug.png' className='w-[53px]' />
+                        <a href='https://www.linkedin.com/in/di-xuan-wang/' className="m-2 ml-0 w-1/5">
+                            <img src='../../assets/LI-In-Bug.png' />
                         </a>
-                        <button className="py-2 px-4">
-                            <Link to="/about">
-                                About
-                            </Link>
-                        </button>
                     </div>
                 </div>
             </header>

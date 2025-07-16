@@ -1,3 +1,5 @@
+import experienceTimeline from "./experienceTimeline";
+
 export function ExperienceSection() {
     return (
         <div className="flex items-center">
@@ -6,7 +8,9 @@ export function ExperienceSection() {
                     Experience
                 </h1>
                 <h2 className="p-4">
-                    Creative Labs
+                    <div>
+                        
+                    </div>
                 </h2>
             </div>
         </div>

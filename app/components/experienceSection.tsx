@@ -1,4 +1,5 @@
-import experienceTimeline from "./experienceTimeline";
+import ExpTimeline from "./experienceTimeline";
+
 
 export function ExperienceSection() {
     return (
@@ -9,7 +10,9 @@ export function ExperienceSection() {
                 </h1>
                 <h2 className="p-4">
                     <div>
+                        <ExpTimeline>
                         
+                        </ExpTimeline>
                     </div>
                 </h2>
             </div>

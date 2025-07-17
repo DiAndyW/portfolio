@@ -11,6 +11,7 @@ const ProjectSection = () => {
             organization: "LAHacks 2025",
             technologies: ['React', 'Node.js', 'Python', 'Flask'],
             description: "Created a code-interview website that helps detect cheating using AI, allowing companies to find the truly talented",
+            link: "https://devpost.com/software/realcoder",
             points: [
                 "Made a responsive website using React and Node.js allowing interviews to be conducted directly on the website",
                 "Prompt engineered Google Gemini models to analyze video, audio, and code for suspicious behavior, providing helpful feedback and follow up questions for interviewers"
@@ -82,6 +83,18 @@ const ProjectSection = () => {
                                                             {item}
                                                         </div>
                                                     ))}
+
+                                                    {item.link && (
+                                                        <a 
+                                                        href={item.link} 
+                                                        target="_blank" 
+                                                        rel="noopener noreferrer"
+                                                        className="ml-4 text-sm text-blue-600 hover:text-blue-800 transition-colors duration-200"
+                                                        onClick={(e) => e.stopPropagation()}
+                                                        >
+                                                        View Project
+                                                        </a>
+                                                    )}
                                                 </div>
                                             )}
                                         </h2>

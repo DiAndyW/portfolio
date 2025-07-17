@@ -11,6 +11,7 @@ const ExperienceSection = () => {
             organization: "Creative Labs | Clubhouse",
             technologies: ['React', 'Next.js', 'Vercel', 'Supabase', 'TailwindCSS'],
             description: "Worked with a 15-person team to build a website using React and Next.js to help UCLA students review and discover clubs",
+            link: "https://www.clubhouseucla.com/",
             points: [
                 "Helped create multiple dynamic API routes to Supabase for different queries to ensure efficient database usage",
                 "Implemented and optimized partial matching in search results, reducing loading times by 50%",
@@ -124,6 +125,18 @@ const ExperienceSection = () => {
                                                             {item}
                                                         </div>
                                                     ))}
+
+                                                    {item.link && (
+                                                        <a 
+                                                        href={item.link} 
+                                                        target="_blank" 
+                                                        rel="noopener noreferrer"
+                                                        className="ml-4 text-sm text-blue-600 hover:text-blue-800 transition-colors duration-200"
+                                                        onClick={(e) => e.stopPropagation()}
+                                                        >
+                                                        View Project
+                                                        </a>
+                                                    )}
                                                 </div>
                                             )}
                                         </h2>

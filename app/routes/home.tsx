@@ -1,7 +1,7 @@
 import { AboutSection } from "~/components/aboutSection";
-import { ExperienceSection } from "~/components/experienceSection";
 import { ProjectSection } from "~/components/projectSection";
 import { useState, useEffect } from 'react';
+import ExperienceSection from "~/components/experienceSection";
 
 const Home = () => {
   const [activeSection, setActiveSection] = useState('about');

@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 
 const ExpTimeline = () => {
+
     const Content = [
         {
-            index: 0,
+            id: 0,
             time: "Mar 2025 - Present",
             title: "Fullstack Developer",
             organization: "Creative Labs",
@@ -17,7 +18,7 @@ const ExpTimeline = () => {
 
         },
         {
-            index: 1,
+            id: 1,
             time: "Jan 2025 - Present",
             title: "Undergraduate Researcher",
             organization: "UCLA Department of Mathematics Lab",
@@ -33,35 +34,49 @@ const ExpTimeline = () => {
     ]
 
     return (
-        <div>
-            {Content.map((item, index) => (<div className="grid grid-cols-6 my-4">
-                <h2 className="col-span-2 self-center">
-                    {item.time}
-                </h2>
-                <h2 className="col-span-4 col-end-7 border p-4">
-                    <h3 className="font-bold mb-2 text-xl">
-                        {item.title}
-                    </h3>
-                    <h3 className="font-bold mb-2">
-                        {item.organization}
-                    </h3>
-                    <h3>
-                        {item.description.map(item => (
-                            <p className="text-sm">
-                                - {item}
-                            </p>
-                        ))}
-                    </h3>
-                    <h3 className="flex">
-                        {item.technologies.map(technology => (
-                            <div className="border rounded-full p-2 m-1">
-                                {technology}
-                            </div>
-                        ))}
-                    </h3>
-                </h2>
+        <div className="max-w-4xl mx-auto p-6">
+            <div className="relative">
+                <div className="absolute top-0 left-4 bottom-0 w-0.5 bg-gray-300"></div>
+
+                {Content.map((item, index) => (
+                    <div className="relative mb-10">
+                        {/* Line */}
+                        <div className="absolute left-3 top-6 w-3 h-3 bg-blue-500 rounded-full border-2 border-white z-10"></div>
+
+                        <div className="grid grid-cols-6 gap-4 ml-8">
+                            <h2 className="col-span-2 self-start pt-4">
+                                {item.time}
+                            </h2>
+
+                            {/* Description Card */}
+                            <h2 className="col-span-4 col-end-7 border rounded-lg p-4">
+                                <h3 className="font-bold mb-2 text-xl">
+                                    {item.title}
+                                </h3>
+                                <h3 className="font-bold mb-2">
+                                    {item.organization}
+                                </h3>
+
+                                {/* Bullet points */}
+                                <h3 className="mb-4">
+                                    {item.description.map(item => (
+                                        <p className="text-sm">
+                                            - {item}
+                                        </p>
+                                    ))}
+                                </h3>
+                                <h3 className="flex flex-wrap gap-2">
+                                    {item.technologies.map(technology => (
+                                        <div className="border rounded-full text-sm px-3 py-1">
+                                            {technology}
+                                        </div>
+                                    ))}
+                                </h3>
+                            </h2>
+                        </div>
+                    </div>
+                ))}
             </div>
-            ))}
         </div>
     );
 }

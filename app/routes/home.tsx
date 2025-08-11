@@ -2,6 +2,7 @@ import { AboutSection } from "~/components/aboutSection";
 import { useState, useEffect } from 'react';
 import ExperienceSection from "~/components/experienceSection";
 import  ProjectSection from "~/components/projectSection";
+import MiscSection from "~/components/miscSection";
 
 const Home = () => {
   const [activeSection, setActiveSection] = useState('about');
@@ -69,7 +70,7 @@ const Home = () => {
             <ProjectSection />
           </section>
           <section id="misc">
-            <AboutSection />
+            <MiscSection />
           </section>
         </main>
         

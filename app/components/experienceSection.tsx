@@ -94,11 +94,18 @@ const ExperienceSection = () => {
                 <h2 className="p-4">
                     <div className="max-w-4xl mx-auto p-6">
                         <div className="relative">
-                            <div className="absolute top-0 left-4 bottom-0 w-0.5 bg-gray-300"></div>
+                            {/* Extended timeline line with gradient fade */}
+                            <div className="absolute top-0 left-4 bottom-0 w-0.5 bg-gradient-to-b from-gray-300 via-gray-300 via-85% to-transparent"></div>
+
+                            {/* Timeline end marker */}
+                            <div className="relative ml-8 pb-8">
+                                <div className="absolute left-[-20px] w-3 h-3 bg-gray-400 rounded-full border-2 border-white z-10"></div>
+                                <div className="text-white text-sm ">The journey continues...</div>
+                            </div>
 
                             {Content.map((item) => (
                                 <div key={item.id} className="relative mb-10">
-                                    {/* Line */}
+                                    {/* Timeline dot */}
                                     <div className="absolute left-3 top-6 w-3 h-3 bg-blue-500 rounded-full border-2 border-white z-10"></div>
 
                                     <div className="grid grid-cols-6 gap-4 ml-8">
@@ -121,7 +128,7 @@ const ExperienceSection = () => {
                                             {/* Technologies */}
                                             <h3 className="flex flex-wrap gap-2">
                                                 {item.technologies.map(technology => (
-                                                    <div className="border rounded-full text-sm px-3 py-1">
+                                                    <div key={technology} className="border rounded-full text-sm px-3 py-1">
                                                         {technology}
                                                     </div>
                                                 ))}
@@ -131,16 +138,14 @@ const ExperienceSection = () => {
                                             {selectedItem == item.id && (
                                                 <div>
                                                     <h3 className="border my-4"></h3>
-                                                    {item.points.map(item => (
-                                                        <div className="text-sm flex">
+                                                    {item.points.map((point, index) => (
+                                                        <div key={index} className="text-sm flex mb-1">
                                                             <span className="pr-2">•</span>
-                                                            {item}
+                                                            {point}
                                                         </div>
                                                     ))}
                                                     
                                                     {item.link && (
-                                                        //#2d769c
-                                                        //text-[#399fd4]
                                                         <a 
                                                         href={item.link} 
                                                         target="_blank" 

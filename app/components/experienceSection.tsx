@@ -10,7 +10,7 @@ const ExperienceSection = () => {
             title: "Frontend Developer",
             organization: "UCLA Department of Civil Engineering",
             technologies: ['React Native', 'Leaflet.js', 'Google Maps API', 'Firebase', 'Expo'],
-            description: "Worked with a small team to develop a weather-tracking platform, allowing farmers to monitor weather on their land",
+            description: "Worked with a small team to develop a weather-tracking platform, allowing farmers to better monitor weather on their land and conserve water",
             points: [
                 "Created a responsive, cross-platform interface using React Native, supporting web, iOS, and Android",
                 "Used Leaflet.js for web maps, and React Native Maps and Google Maps API on mobile to display weather layers from Google Earth Engine",

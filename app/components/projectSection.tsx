@@ -6,7 +6,18 @@ const ProjectSection = () => {
     const Content = [
         {
             id: 1,
-            time: "Apr 2025",
+            title: "Morii",
+            technologies: ['Swift', 'Express.js', 'Node.js', 'MongoDB'],
+            description: "Collaborated on a social media app designed to promote emotional awareness and authentic self-expression",
+            link: "https://apps.apple.com/us/app/morii-moments-that-stay/id6746750544",
+            points: [
+                "Implemented core frontend features using Swift, including a sign-in flow, custom nav bar, homepage, and user profiles",
+                "Wrote and tested RESTful API endpoints that returned mood summaries and analytics over customizable time frames"
+            ]
+        },
+        {
+            id: 2,
+            // time: "Apr 2025",
             title: "True Talent",
             organization: "LAHacks 2025",
             technologies: ['React', 'Node.js', 'Python', 'Flask'],
@@ -18,8 +29,8 @@ const ProjectSection = () => {
             ]
         },
         {
-            id: 2,
-            time: "Jan 2024 - Jun 2024",
+            id: 3,
+            // time: "Jan 2024 - Jun 2024",
             title: "Temple of Doom",
             organization: "",
             technologies: ['C++'],
@@ -50,9 +61,9 @@ const ProjectSection = () => {
                                 <h3 className="font-bold text-xl text-white">
                                     {item.title}
                                 </h3>
-                                <span className="text-sm text-white ml-4">
+                                {/* <span className="text-sm text-white ml-4">
                                     {item.time}
-                                </span>
+                                </span> */}
                             </div>
                             
                             {item.organization && (

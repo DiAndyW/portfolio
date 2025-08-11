@@ -39,7 +39,7 @@ const Home = () => {
   return (
     <div className="flex justify-center pt-4">
       <div className="flex w-7/10 items-start">
-        <aside className="px-4 py-4 w-1/8 flex-shrink-0 sticky top-24">
+        <aside className="px-4 py-4 w-1/7 flex-shrink-0 sticky top-24">
           <ul className="space-y-2">
             {navItems.map(item => (
               <li key={item.id}>

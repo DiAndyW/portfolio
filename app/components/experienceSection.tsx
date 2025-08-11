@@ -111,7 +111,7 @@ const ExperienceSection = () => {
                                             <h3 className="font-bold mb-2 text-xl">
                                                 {item.title}
                                             </h3>
-                                            <h3 className="font-bold mb-2">
+                                            <h3 className="font-bold mb-2 text-[#5d97b3]">
                                                 {item.organization}
                                             </h3>
                                             <h3 className="mb-4 text-md">
@@ -137,13 +137,15 @@ const ExperienceSection = () => {
                                                             {item}
                                                         </div>
                                                     ))}
-
+                                                    
                                                     {item.link && (
+                                                        //#2d769c
+                                                        //text-[#399fd4]
                                                         <a 
                                                         href={item.link} 
                                                         target="_blank" 
                                                         rel="noopener noreferrer"
-                                                        className="ml-4 text-sm text-blue-600 hover:text-blue-800 transition-colors duration-200"
+                                                        className="ml-4 text-sm text-[#399fd4] hover:text-[#2d769c] transition-colors duration-200"
                                                         onClick={(e) => e.stopPropagation()}
                                                         >
                                                         View Project

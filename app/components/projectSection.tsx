@@ -56,7 +56,7 @@ const ProjectSection = () => {
                             </div>
                             
                             {item.organization && (
-                                <h4 className="font-semibold text-[#399fd4] mb-3">
+                                <h4 className="font-semibold text-[#5d97b3] mb-3">
                                     {item.organization}
                                 </h4>
                             )}
@@ -96,7 +96,7 @@ const ProjectSection = () => {
                                         href={item.link} 
                                         target="_blank" 
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200"
+                                        className="inline-flex items-center text-sm text-[#399fd4] hover:text-blue-800 font-medium transition-colors duration-200"
                                         onClick={(e) => e.stopPropagation()}
                                     >
                                         View Project →

@@ -1,6 +1,5 @@
 import { Link } from "react-router";
 
-//add some kind of parameter to the link so then the tab gets highlighted
 export function Header() {
     return (
         <div className="flex justify-center sticky top-0 z-50">
@@ -12,13 +11,16 @@ export function Header() {
                             Andy Wang
                         </Link>
                     </button>
-
-                    <div className="col-start-11 col-span-2 flex items-center justify-end gap-2">
-                        <a href='https://github.com/DiAndyW' className="m-2 w-1/5">
-                            <img src='../../assets/github-mark.png' />
+                     
+                    <div className="col-start-10 col-span-3 flex items-center justify-end gap-1">
+                        <a href='https://github.com/DiAndyW' className="p-1">
+                            <img src='../../assets/github-white.svg' className="w-9" />
                         </a>
-                        <a href='https://www.linkedin.com/in/di-xuan-wang/' className="m-2 ml-0 w-1/5">
-                            <img src='../../assets/LI-In-Bug.png' />
+                        <a href='https://www.linkedin.com/in/di-xuan-wang/' className="p-1 pr-0">
+                            <img src='../../assets/InBug-White.png' className="w-10" />
+                        </a>
+                        <a href='mailto:andy.dxwang@gmail.com' className="pr-4 p-1 pl-0">
+                            <img src='../../assets/mail-svgrepo-com.svg' alt='Email' className="w-11" />
                         </a>
                     </div>
                 </div>

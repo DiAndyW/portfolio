@@ -6,6 +6,19 @@ const ExperienceSection = () => {
     const Content = [
         {
             id: 1,
+            time: "June 2025 - Present",
+            title: "Frontend Developer",
+            organization: "UCLA Department of Civil Engineering",
+            technologies: ['React Native', 'Leaflet.js', 'Google Maps API', 'Firebase', 'Expo'],
+            description: "Worked with a small team to develop a weather-tracking platform, allowing farmers to monitor weather on their land",
+            points: [
+                "Created a responsive, cross-platform interface using React Native, supporting web, iOS, and Android",
+                "Used Leaflet.js for web maps, and React Native Maps and Google Maps API on mobile to display weather layers from Google Earth Engine",
+                "Cached weather data in Firebase for high-traffic areas, improving processing speeds by 60%"
+            ]
+        },
+        {
+            id: 2,
             time: "Mar 2025 - Present",
             title: "Fullstack Developer",
             organization: "Creative Labs | Clubhouse",
@@ -17,10 +30,9 @@ const ExperienceSection = () => {
                 "Implemented and optimized partial matching in search results, reducing loading times by 50%",
                 "Collaborated with the design team and other developers to bring Hi-Fi designs to life using TailwindCSS"
             ]
-
         },
         {
-            id: 2,
+            id: 3,
             time: "Mar 2025 - Jun 2025",
             title: "Learning Assistant",
             organization: "UCLA Department of Computer Science",
@@ -33,19 +45,19 @@ const ExperienceSection = () => {
             ]
         },
         {
-            id: 3,
+            id: 4,
             time: "Jan 2025 - Present",
             title: "Undergraduate Researcher",
             organization: "UCLA Department of Mathematics Lab",
             technologies: [],
-            description: "Collaborated with fellow researchers to conduct research on the Bandits Problems in a cascading multiplayer setting with information asymmetry",
+            description: "Collaborated with others to research the multi-armed bandit problem in reinforcement learning, submission under review at AAAI",
             points: [
-                "Numerically analyzed several other UCB algorithms for their effectiveness in the aforementioned problem settings to develop a more optimal approach ",
-                "Designed an algorithm involving an interval approach to create a list of the top K items, reaching sublinear regret"
+                "Numerically analyzed several other UCB algorithms for their effectiveness in this setting",
+                "Designed two algorithms with an intervals approach in one and a round-robin style in the other, reaching sublinear regret in both"
             ]
         },
         {
-            id: 4,
+            id: 5,
             time: "Oct 2024 - May 2025",
             title: "Fullstack Developer",
             organization: "Creative Labs | Algoace",
@@ -59,7 +71,7 @@ const ExperienceSection = () => {
 
         },
         {
-            id: 5,
+            id: 6,
             time: "Sep 2024 - Jan 2025",
             title: "Undergraduate Researcher",
             organization: "Elegant Mind Lab UCLA",

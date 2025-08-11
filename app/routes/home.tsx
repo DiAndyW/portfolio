@@ -37,9 +37,9 @@ const Home = () => {
   ];
 
   return (
-    <div className="flex justify-center">
-      <div className="flex w-4/5 items-start">
-        <aside className="p-4 w-1/5 flex-shrink-0 sticky top-24">
+    <div className="flex justify-center pt-4">
+      <div className="flex w-7/10 items-start">
+        <aside className="px-4 py-4 w-1/8 flex-shrink-0 sticky top-24">
           <ul className="space-y-2">
             {navItems.map(item => (
               <li key={item.id}>
@@ -58,7 +58,7 @@ const Home = () => {
           </ul>
         </aside>
         
-        <main className="flex-1 px-8">
+        <main className="flex-1 px-4">
           <section id="about">
             <AboutSection />
           </section>
@@ -73,7 +73,7 @@ const Home = () => {
           </section>
         </main>
         
-        <div className="w-1/5 flex-shrink-0 p-4">
+        <div className="w-1/6 flex-shrink-0 p-4">
           <img src='../../assets/cat.jpg' alt="cat" className="w-full h-auto"/>
         </div>
       </div>

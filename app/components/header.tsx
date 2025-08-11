@@ -3,11 +3,11 @@ import { Link } from "react-router";
 export function Header() {
     return (
         <div className="flex justify-center sticky top-0 z-50">
-            <header className="items-center border border-2 border-[#5d97b3] rounded-xl w-7/10 mt-4 bg-black/50">
+            <header className="items-center border border-2 border-[#5d97b3] rounded-xl w-7/10 mt-4 bg-black/70 backdrop-blur-sm">
                 <div className="grid grid-cols-12">
                 {/* <div className="flex justify-between"> */}
                     <button className="col-span-2">
-                        <Link to="/" className="text-[28px]">
+                        <Link to="/" className="text-3xl">
                             Andy Wang
                         </Link>
                     </button>

@@ -94,7 +94,7 @@ const ExperienceSection = () => {
                 <h2 className="p-4">
                     <div className="max-w-4xl mx-auto p-6">
                         <div className="relative">
-                            {/* Extended timeline line with gradient fade */}
+                            {/* Extended timeline line */}
                             <div className="absolute top-0 left-4 bottom-0 w-0.5 bg-gradient-to-b from-gray-300 via-gray-300 via-85% to-transparent"></div>
 
                             {/* Timeline end marker */}

@@ -90,8 +90,14 @@ const ProjectSection = () => {
                             ))}
                         </div>
                         
-                        {/* Extended description if card clicked */}
-                        {selectedItem === item.id && (
+                        {/* Extended description */}
+                        <div 
+                            className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                                selectedItem === item.id 
+                                    ? 'max-h-96 opacity-100' 
+                                    : 'max-h-0 opacity-0'                               
+                                }`}
+                        >
                             <div className="border-t pt-4 mt-4">
                                 <div className="space-y-2 mb-4">
                                     {item.points.map((point, index) => (
@@ -114,7 +120,7 @@ const ProjectSection = () => {
                                     </a>
                                 )}
                             </div>
-                        )}
+                        </div>
                     </div>
                 ))}
             </div>

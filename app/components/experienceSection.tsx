@@ -134,8 +134,14 @@ const ExperienceSection = () => {
                                                 ))}
                                             </h3>
                                             
-                                            {/* Extended description if card clicked */}
-                                            {selectedItem == item.id && (
+                                            {/* Extended description */}
+                                            <div 
+                                                className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                                                    selectedItem === item.id 
+                                                        ? 'max-h-96 opacity-100' 
+                                                        : 'max-h-0 opacity-0'
+                                                }`}
+                                            >
                                                 <div>
                                                     <h3 className="border my-4"></h3>
                                                     {item.points.map((point, index) => (
@@ -157,7 +163,7 @@ const ExperienceSection = () => {
                                                         </a>
                                                     )}
                                                 </div>
-                                            )}
+                                            </div>
                                         </h2>
                                     </div>
                                 </div>

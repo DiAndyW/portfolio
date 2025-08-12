@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import rainImage from "../../assets/rain.jpg";
+import React from "react";
 
 interface BaseCard {
     id: number;
@@ -26,18 +25,6 @@ interface ImageCard extends BaseCard {
 type CardContent = TextCard | ImageCard;
 
 const MiscSection: React.FC = () => {
-    const [flippedCards, setFlippedCards] = useState<Set<number>>(new Set());
-
-    const toggleCard = (cardId: number): void => {
-        const newFlippedCards = new Set(flippedCards);
-        if (newFlippedCards.has(cardId)) {
-            newFlippedCards.delete(cardId);
-        } else {
-            newFlippedCards.add(cardId);
-        }
-        setFlippedCards(newFlippedCards);
-    };
-
     const Content: CardContent[] = [
         {
             id: 1,
@@ -100,19 +87,24 @@ const MiscSection: React.FC = () => {
                     {Content.map((item) => (
                         <div 
                             key={item.id} 
+                            className="group"
                             style={{ perspective: '1000px' }}
                         >
                             <div 
-                                className={`relative w-64 h-80 cursor-pointer transition-transform duration-700`}
-                                onClick={() => toggleCard(item.id)}
+                                className="relative w-64 h-80 transition-transform duration-700"
                                 style={{
                                     transformStyle: 'preserve-3d',
-                                    transform: flippedCards.has(item.id) ? 'rotateY(180deg)' : 'rotateY(0deg)'
+                                }}
+                                onMouseEnter={(e) => {
+                                    e.currentTarget.style.transform = 'rotateY(180deg)';
+                                }}
+                                onMouseLeave={(e) => {
+                                    e.currentTarget.style.transform = 'rotateY(0deg)';
                                 }}
                             >
                                 {/* Front of card */}
                                 <div 
-                                    className="absolute inset-0 w-full h-full rounded-lg border border-white/20 bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-6 flex flex-col items-center justify-center hover:shadow-lg transition-shadow duration-200"
+                                    className="absolute inset-0 w-full h-full rounded-lg border border-white/20 border-2 bg-gray-900/90 backdrop-blur-sm p-6 flex flex-col items-center justify-center hover:shadow-lg transition-shadow duration-200"
                                     style={{
                                         backfaceVisibility: 'hidden'
                                     }}
@@ -129,9 +121,6 @@ const MiscSection: React.FC = () => {
                                             <p className="text-white/80 text-center">
                                                 {item.frontText}
                                             </p>
-                                            <div className="absolute bottom-4 text-white/60 text-sm">
-                                                →
-                                            </div>
                                         </>
                                     ) : (
                                         // Image card front - fills entire card
@@ -147,9 +136,6 @@ const MiscSection: React.FC = () => {
                                                     {item.frontImage}
                                                 </div>
                                             )}
-                                            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white/60 text-sm bg-black/50 px-2 py-1 rounded">
-                                                →
-                                            </div>
                                         </div>
                                     )}
                                 </div>
@@ -172,9 +158,6 @@ const MiscSection: React.FC = () => {
                                                 <span className="text-sm">{fact}</span>
                                             </div>
                                         ))}
-                                    </div>
-                                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white/60 text-sm">
-                                        ←
                                     </div>
                                 </div>
                             </div>

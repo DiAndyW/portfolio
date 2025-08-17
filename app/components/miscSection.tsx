@@ -91,7 +91,7 @@ const MiscSection: React.FC = () => {
                             style={{ perspective: '1000px' }}
                         >
                             <div 
-                                className="relative w-64 h-80 transition-transform duration-700"
+                                className="relative w-64 h-80 transition-transform duration-800"
                                 style={{
                                     transformStyle: 'preserve-3d',
                                 }}
@@ -104,7 +104,7 @@ const MiscSection: React.FC = () => {
                             >
                                 {/* Front of card */}
                                 <div 
-                                    className="absolute inset-0 w-full h-full rounded-lg border border-white/20 border-2 bg-gray-900/90 backdrop-blur-sm p-6 flex flex-col items-center justify-center hover:shadow-lg transition-shadow duration-200"
+                                    className="absolute inset-0 w-full h-full rounded-lg border border-white/30 border-2 bg-gray-900/90 backdrop-blur-sm p-6 flex flex-col items-center justify-center hover:shadow-lg transition-shadow duration-200"
                                     style={{
                                         backfaceVisibility: 'hidden'
                                     }}
@@ -142,7 +142,7 @@ const MiscSection: React.FC = () => {
 
                                 {/* Back of card */}
                                 <div 
-                                    className="absolute inset-0 w-full h-full rounded-lg border border-white/20 backdrop-blur-sm p-6 flex flex-col justify-center"
+                                    className="absolute inset-0 w-full h-full rounded-lg border border-white/20 border-2 backdrop-blur-sm p-6 flex flex-col justify-center"
                                     style={{
                                         backfaceVisibility: 'hidden',
                                         transform: 'rotateY(180deg)'

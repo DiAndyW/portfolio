@@ -53,17 +53,18 @@ const Home = () => {
       />
       
       <div className="flex w-7/10 items-start">
-        <aside className="px-4 py-4 w-1/7 flex-shrink-0 sticky top-24 z-50">
+        <aside className="px-4 py-4 w-1/7 flex-shrink-0 sticky top-24 z-50 min-w-0">
           <ul className="space-y-2">
             {navItems.map(item => (
               <li key={item.id}>
                 <a 
                   href={`#${item.id}`}
-                  className={`hover:text-[#5d97b3] text-xl transition-all duration-200 ${
-                    activeSection === item.id 
+                  className={`hover:text-[#5d97b3] transition-all duration-200
+                    ${activeSection === item.id 
                       ? 'font-bold text-[#5d97b3]' 
-                      : ''
-                  }`}
+                      : ''}
+                    text-sm sm:text-base md:text-lg lg:text-xl
+                  `}
                 >
                   {item.label}
                 </a>

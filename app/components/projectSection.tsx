@@ -52,7 +52,7 @@ const ProjectSection = () => {
                 {Content.map((item) => (
                     <div 
                         key={item.id} 
-                        className="bg-transparent border rounded-lg my-8 p-4 shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer"
+                        className="bg-transparent border border-2 rounded-lg my-8 p-4 shadow-sm hover:shadow-md hover:bg-black/30 transition-all duration-300 cursor-pointer"
                         onClick={() => setSelectedItem(selectedItem === item.id ? null : item.id)}
                     >
                         {/* Header */}
@@ -83,7 +83,7 @@ const ProjectSection = () => {
                             {item.technologies.map((technology, index) => (
                                 <span 
                                     key={index}
-                                    className="text-white border rounded-full text-sm px-3 py-1"
+                                    className="text-white border border-2 rounded-full text-sm px-3 py-1"
                                 >
                                     {technology}
                                 </span>

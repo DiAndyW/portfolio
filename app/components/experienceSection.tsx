@@ -114,7 +114,9 @@ const ExperienceSection = () => {
                                         </h2>
 
                                         {/* Description Card */}
-                                        <h2 className="col-span-4 col-end-7 border rounded-lg p-4 cursor-pointer" onClick={() => setSelectedItem(selectedItem === item.id ? null : item.id)}>
+                                        <h2 className="col-span-4 col-end-7 border border-2 rounded-lg p-4 shadow-sm hover:shadow-md hover:bg-black/30 transition-all duration-300 cursor-pointer" 
+                                            onClick={() => setSelectedItem(selectedItem === item.id ? null : item.id)}
+                                        >
                                             <h3 className="font-bold mb-2 text-xl">
                                                 {item.title}
                                             </h3>
@@ -128,7 +130,7 @@ const ExperienceSection = () => {
                                             {/* Technologies */}
                                             <h3 className="flex flex-wrap gap-2">
                                                 {item.technologies.map(technology => (
-                                                    <div key={technology} className="border rounded-full text-sm px-3 py-1">
+                                                    <div key={technology} className="border border-2 rounded-full text-sm px-3 py-1">
                                                         {technology}
                                                     </div>
                                                 ))}

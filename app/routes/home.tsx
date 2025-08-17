@@ -38,9 +38,22 @@ const Home = () => {
   ];
 
   return (
-    <div className="flex justify-center pt-4">
+    <div className="flex justify-center pt-4 relative">
+      <div 
+        className="fixed top-0 left-0 right-0 z-40 pointer-events-none"
+        style={{
+          height: '150px', 
+          background: `linear-gradient(180deg, 
+            rgb(17, 24, 39) 0%, 
+            rgb(17, 24, 39) 65%, 
+            rgba(17, 24, 39, 0.8) 70%, 
+            rgba(17, 24, 39, 0.4) 85%, 
+            rgba(17, 24, 39, 0) 100%)`
+        }}
+      />
+      
       <div className="flex w-7/10 items-start">
-        <aside className="px-4 py-4 w-1/7 flex-shrink-0 sticky top-24">
+        <aside className="px-4 py-4 w-1/7 flex-shrink-0 sticky top-24 z-50">
           <ul className="space-y-2">
             {navItems.map(item => (
               <li key={item.id}>

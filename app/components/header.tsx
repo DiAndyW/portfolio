@@ -2,25 +2,27 @@ import { Link } from "react-router";
 
 export function Header() {
     return (
-        <div className="flex justify-center sticky top-0 z-50">
-            <header className="items-center border border-2 border-[#5d97b3] rounded-xl w-7/10 mt-4 bg-black/70 backdrop-blur-sm">
-                <div className="grid grid-cols-12">
-                    <button className="col-span-2">
-                        <Link to="/" className="text-3xl">
-                            Andy Wang
-                        </Link>
-                    </button>
-                     
-                    <div className="col-start-10 col-span-3 flex items-center justify-end gap-1">
-                        <a href='https://github.com/DiAndyW' className="p-1">
-                            <img src='../../assets/github-white.svg' className="w-9" />
-                        </a>
-                        <a href='https://www.linkedin.com/in/di-xuan-wang/' className="p-1 pr-0">
-                            <img src='../../assets/InBug-White.png' className="w-10" />
-                        </a>
-                        <a href='mailto:andy.dxwang@gmail.com' className="pr-4 p-1 pl-0">
-                            <img src='../../assets/mail-svgrepo-com.svg' alt='Email' className="w-11" />
-                        </a>
+        <div className="flex justify-center sticky top-0 z-50 bg-gray-900">
+            <header className="w-7/10 mt-6 mb-2">
+                <div className="px-6 py-4">
+                    <div className="grid grid-cols-12 items-center">
+                        <div className="col-span-6">
+                            <Link to="/" className="text-3xl font-medium text-white hover:text-blue-300 transition-colors">
+                                Andy Wang
+                            </Link>
+                        </div>
+                            
+                        <div className="col-span-6 flex items-center justify-end gap-3">
+                            <a href='https://github.com/DiAndyW' className="p-2 hover:bg-white/10 rounded-lg transition-colors">
+                                <img src='../../assets/github-white.svg' className="w-8" alt="GitHub" />
+                            </a>
+                            <a href='https://www.linkedin.com/in/di-xuan-wang/' className="p-2 hover:bg-white/10 rounded-lg transition-colors">
+                                <img src='../../assets/InBug-White.png' className="w-9" alt="LinkedIn" />
+                            </a>
+                            <a href='mailto:andy.dxwang@gmail.com' className="p-2 hover:bg-white/10 rounded-lg transition-colors">
+                                <img src='../../assets/mail-svgrepo-com.svg' alt='Email' className="w-9" />
+                            </a>
+                        </div>
                     </div>
                 </div>
             </header>

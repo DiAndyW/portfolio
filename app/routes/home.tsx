@@ -89,7 +89,7 @@ const Home = () => {
         </main>
         
         <div className="w-1/6 flex-shrink-0 p-4">
-          <img src='../../assets/cat.jpg' alt="cat" className="w-full h-auto"/>
+          {/* <img src='../../assets/cat.jpg' alt="cat" className="w-full h-auto"/> */}
         </div>
       </div>
     </div>

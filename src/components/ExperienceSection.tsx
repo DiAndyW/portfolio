@@ -100,17 +100,17 @@ const ExperienceSection = () => {
                         {/* Timeline end marker */}
                         <div className="relative ml-4 sm:ml-8 pb-8">
                             <div className="absolute left-[-12px] sm:left-[-20px] w-3 h-3 bg-gray-400 rounded-full border-2 border-white z-10"></div>
-                            <div className="text-white text-sm">The journey continues...</div>
+                            <div className="text-white text-sm ml-1">The journey continues...</div>
                         </div>
 
                         {Content.map((item) => (
                             <div key={item.id} className="relative mb-6 sm:mb-10">
                                 {/* Timeline dot */}
-                                <div className="absolute left-[5px] sm:left-3 top-4 sm:top-6 w-3 h-3 bg-blue-500 rounded-full border-2 border-white z-10"></div>
+                                <div className="absolute left-[5px] sm:left-3 top-5 sm:top-6 w-3 h-3 bg-blue-500 rounded-full border-2 border-white z-10"></div>
 
                                 <div className="ml-4 sm:ml-8">
                                     <div className="block sm:grid sm:grid-cols-6 sm:gap-4">
-                                        <div className="sm:col-span-2 sm:self-start sm:pt-4 mb-2 sm:mb-0">
+                                        <div className="sm:col-span-2 sm:self-start pt-3 sm:pt-4 mb-2 sm:mb-0 ml-1">
                                             <span className="text-sm sm:text-base text-gray-300 font-medium">
                                                 {item.time}
                                             </span>

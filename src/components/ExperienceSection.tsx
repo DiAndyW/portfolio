@@ -86,55 +86,58 @@ const ExperienceSection = () => {
     ]
 
     return (
-        <div className="flex items-center">
-            <div className="mt-8 font-normal">
-                <h1 className="text-5xl p-4">
-                    Experience
-                </h1>
-                <h2 className="p-4">
-                    <div className="max-w-4xl mx-auto p-6">
-                        <div className="relative">
-                            {/* Extended timeline line */}
-                            <div className="absolute top-0 left-4 bottom-0 w-0.5 bg-gradient-to-b from-gray-300 via-gray-300 via-85% to-transparent"></div>
+    <div className="flex items-center">
+        <div className="mt-8 font-normal">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl p-2 sm:p-4">
+                Experience
+            </h1>
+            <h2 className="p-2 sm:p-4">
+                <div className="max-w-4xl mx-auto p-3 sm:p-6">
+                    <div className="relative">
+                        {/* Extended timeline line */}
+                        <div className="absolute top-0 left-2 sm:left-4 bottom-0 w-0.5 bg-gradient-to-b from-gray-300 via-gray-300 via-85% to-transparent"></div>
 
-                            {/* Timeline end marker */}
-                            <div className="relative ml-8 pb-8">
-                                <div className="absolute left-[-20px] w-3 h-3 bg-gray-400 rounded-full border-2 border-white z-10"></div>
-                                <div className="text-white text-sm ">The journey continues...</div>
-                            </div>
+                        {/* Timeline end marker */}
+                        <div className="relative ml-4 sm:ml-8 pb-8">
+                            <div className="absolute left-[-12px] sm:left-[-20px] w-3 h-3 bg-gray-400 rounded-full border-2 border-white z-10"></div>
+                            <div className="text-white text-sm">The journey continues...</div>
+                        </div>
 
-                            {Content.map((item) => (
-                                <div key={item.id} className="relative mb-10">
-                                    {/* Timeline dot */}
-                                    <div className="absolute left-3 top-6 w-3 h-3 bg-blue-500 rounded-full border-2 border-white z-10"></div>
+                        {Content.map((item) => (
+                            <div key={item.id} className="relative mb-6 sm:mb-10">
+                                {/* Timeline dot */}
+                                <div className="absolute left-[5px] sm:left-3 top-4 sm:top-6 w-3 h-3 bg-blue-500 rounded-full border-2 border-white z-10"></div>
 
-                                    <div className="grid grid-cols-6 gap-4 ml-8">
-                                        <h2 className="col-span-2 self-start pt-4">
-                                            {item.time}
-                                        </h2>
+                                <div className="ml-4 sm:ml-8">
+                                    <div className="block sm:grid sm:grid-cols-6 sm:gap-4">
+                                        <div className="sm:col-span-2 sm:self-start sm:pt-4 mb-2 sm:mb-0">
+                                            <span className="text-sm sm:text-base text-gray-300 font-medium">
+                                                {item.time}
+                                            </span>
+                                        </div>
 
                                         {/* Description Card */}
-                                        <h2 className="col-span-4 col-end-7 border border-2 rounded-lg p-4 shadow-sm hover:shadow-md hover:bg-black/30 transition-all duration-300 cursor-pointer" 
+                                        <div className="sm:col-span-4 sm:col-end-7 border border-2 rounded-lg p-3 sm:p-4 shadow-sm hover:shadow-md hover:bg-black/30 transition-all duration-300 cursor-pointer" 
                                             onClick={() => setSelectedItem(selectedItem === item.id ? null : item.id)}
                                         >
-                                            <h3 className="font-bold mb-2 text-xl">
+                                            <h3 className="font-bold mb-2 text-lg sm:text-xl">
                                                 {item.title}
                                             </h3>
-                                            <h3 className="font-bold mb-2 text-[#5d97b3]">
+                                            <h3 className="font-bold mb-2 text-sm sm:text-base text-[#5d97b3]">
                                                 {item.organization}
                                             </h3>
-                                            <h3 className="mb-4 text-md">
+                                            <h3 className="mb-3 sm:mb-4 text-sm sm:text-md leading-relaxed">
                                                 {item.description}
                                             </h3>
 
                                             {/* Technologies */}
-                                            <h3 className="flex flex-wrap gap-2">
+                                            <div className="flex flex-wrap gap-1 sm:gap-2">
                                                 {item.technologies.map(technology => (
-                                                    <div key={technology} className="border border-2 rounded-full text-sm px-3 py-1">
+                                                    <div key={technology} className="border border-2 rounded-full text-xs sm:text-sm px-2 sm:px-3 py-1">
                                                         {technology}
                                                     </div>
                                                 ))}
-                                            </h3>
+                                            </div>
                                             
                                             {/* Extended description */}
                                             <div 
@@ -145,37 +148,38 @@ const ExperienceSection = () => {
                                                 }`}
                                             >
                                                 <div>
-                                                    <h3 className="border my-4"></h3>
+                                                    <div className="border-t my-3 sm:my-4"></div>
                                                     {item.points.map((point, index) => (
-                                                        <div key={index} className="text-sm flex mb-1">
-                                                            <span className="pr-2">•</span>
-                                                            {point}
+                                                        <div key={index} className="text-xs sm:text-sm flex mb-1 leading-relaxed">
+                                                            <span className="pr-2 flex-shrink-0">•</span>
+                                                            <span>{point}</span>
                                                         </div>
                                                     ))}
                                                     
                                                     {item.link && (
                                                         <a 
-                                                        href={item.link} 
-                                                        target="_blank" 
-                                                        rel="noopener noreferrer"
-                                                        className="ml-4 text-sm text-[#399fd4] hover:text-[#2d769c] transition-colors duration-200"
-                                                        onClick={(e) => e.stopPropagation()}
+                                                            href={item.link} 
+                                                            target="_blank" 
+                                                            rel="noopener noreferrer"
+                                                            className="inline-block mt-2 sm:ml-4 text-xs sm:text-sm text-[#399fd4] hover:text-[#2d769c] transition-colors duration-200 underline"
+                                                            onClick={(e) => e.stopPropagation()}
                                                         >
-                                                        View Project
+                                                            View Project
                                                         </a>
                                                     )}
                                                 </div>
                                             </div>
-                                        </h2>
+                                        </div>
                                     </div>
                                 </div>
-                            ))}
-                        </div>
+                            </div>
+                        ))}
                     </div>
-                </h2>
-            </div>
+                </div>
+            </h2>
         </div>
-    );
+    </div>
+);
 }
 
 export default ExperienceSection;

@@ -6,13 +6,18 @@ import MiscSection from "./components/MiscSection";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 
+interface NavItem {
+  id: string;
+  label: string;
+}
+
 function App() {
-  const [activeSection, setActiveSection] = useState('about');
+  const [activeSection, setActiveSection] = useState<string>('about');
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
+      (entries: IntersectionObserverEntry[]) => {
+        entries.forEach((entry: IntersectionObserverEntry) => {
           if (entry.isIntersecting) {
             setActiveSection(entry.target.id);
           }
@@ -25,14 +30,14 @@ function App() {
     );
 
     const sections = document.querySelectorAll('section');
-    sections.forEach(section => observer.observe(section));
+    sections.forEach((section: Element) => observer.observe(section));
 
     return () => {
-      sections.forEach(section => observer.unobserve(section));
+      sections.forEach((section: Element) => observer.unobserve(section));
     };
   }, []);
 
-  const navItems = [
+  const navItems: NavItem[] = [
     { id: 'about', label: 'About' },
     { id: 'experience', label: 'Experience' },
     { id: 'projects', label: 'Projects' },
@@ -57,18 +62,19 @@ function App() {
           }}
         />
         
-        <div className="flex w-7/10 items-start">
-          <aside className="px-4 py-4 w-1/7 flex-shrink-0 sticky top-24 z-50 min-w-0">
-            <ul className="space-y-2">
-              {navItems.map(item => (
+        <div className="flex w-7/10 items-start px-2 sm:px-4">
+          <aside className="px-1 sm:px-2 md:px-4 py-4 w-16 sm:w-20 md:w-24 lg:w-1/7 flex-shrink-0 sticky top-24 z-50 min-w-0">
+            <ul className="space-y-1 sm:space-y-2">
+              {navItems.map((item: NavItem) => (
                 <li key={item.id}>
                   <a 
                     href={`#${item.id}`}
-                    className={`hover:text-[#5d97b3] transition-all duration-200
+                    className={`hover:text-[#5d97b3] transition-all duration-200 block
                       ${activeSection === item.id 
                         ? 'font-bold text-[#5d97b3]' 
                         : ''}
-                      text-sm sm:text-base md:text-lg lg:text-xl
+                      text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl
+                      leading-tight
                     `}
                   >
                     {item.label}
@@ -78,7 +84,7 @@ function App() {
             </ul>
           </aside>
           
-          <main className="flex-1 px-4">
+          <main className="flex-1 px-2 sm:px-4">
             <section id="about">
               <AboutSection />
             </section>
@@ -93,7 +99,7 @@ function App() {
             </section>
           </main>
           
-          <div className="w-1/6 flex-shrink-0 p-4">
+          <div className="hidden md:block w-12 lg:w-1/6 flex-shrink-0 p-2 lg:p-4">
             {/* <img src='../assets/cat.jpg' alt="cat" className="w-full h-auto"/> */}
           </div>
         </div>

@@ -101,6 +101,10 @@ const MiscSection: React.FC = () => {
                                 onMouseLeave={(e) => {
                                     e.currentTarget.style.transform = 'rotateY(0deg)';
                                 }}
+                                // touch support for mobile
+                                onTouchStart={(e) => {
+                                    e.currentTarget.style.transform = 'rotateY(180deg)';
+                                }}
                             >
                                 {/* Front of card */}
                                 <div 

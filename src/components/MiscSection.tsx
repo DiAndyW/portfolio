@@ -64,7 +64,7 @@ const MiscSection: React.FC = () => {
             backContent: {
                 title: "Can't get 'em out of my head!",
                 facts: [
-                    "Laufey - Silver Lining",
+                    "Laufey - A Matter of Time",
                     "keshi - WANTCHU",
                     "d4vd - Sleep Well",
                     "HUNTR/X - Golden"
@@ -74,16 +74,16 @@ const MiscSection: React.FC = () => {
     ];
 
     return (
-        <div className="max-w-6xl mx-auto p-6">
+        <div className="flex items-center">
             <div className="mt-8 font-normal">
-                <h1 className="text-5xl p-4 text-white">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl p-2 sm:p-4">
                     Misc
                 </h1>
-                <h2 className="p-4 text-white mb-8">
+                <h2 className="text-white mb-4 mt-4 px-4">
                     Here are some random snippets or facts from my life!
                 </h2>
 
-                <div className="flex flex-wrap gap-6 justify-center">
+                <div className="flex flex-wrap gap-6 justify-center px-4">
                     {Content.map((item) => (
                         <div 
                             key={item.id} 

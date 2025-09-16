@@ -3,6 +3,7 @@ import { AboutSection } from "./components/AboutSection";
 import ExperienceSection from "./components/ExperienceSection";
 import ProjectSection from "./components/ProjectSection";
 import MiscSection from "./components/MiscSection";
+import { FriendsSection } from './components/FriendsSection';
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 
@@ -41,7 +42,8 @@ function App() {
     { id: 'about', label: 'About' },
     { id: 'experience', label: 'Experience' },
     { id: 'projects', label: 'Projects' },
-    { id: 'misc', label: 'Misc' }
+    { id: 'misc', label: 'Misc' },
+    { id: 'friends', label: 'Friends'}
   ];
 
   return (
@@ -96,6 +98,9 @@ function App() {
             </section>
             <section id="misc">
               <MiscSection />
+            </section>
+            <section id="friends">
+              <FriendsSection />
             </section>
           </main>
           

@@ -2,11 +2,16 @@ export function FriendsSection() {
     const People = [
         {
             id: 1,
+            name: "Hannah Gonzalez",
+            link: "https://hannahskyg.github.io/",
+        },
+        {
+            id: 2,
             name: "Syrno",
             link: "https://syrno.net/",
         },
         {
-            id: 2,
+            id: 3,
             name: "Homan Qiu",
             link: "https://i-am.fish/",
         },

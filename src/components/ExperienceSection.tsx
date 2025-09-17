@@ -10,7 +10,7 @@ const ExperienceSection = () => {
             title: "Frontend Developer",
             organization: "UCLA Department of Civil Engineering",
             technologies: ['React Native', 'Leaflet.js', 'Google Maps API', 'Firebase', 'Expo'],
-            description: "Worked with a small team to develop a weather-tracking platform, allowing farmers to better monitor weather on their land and conserve water",
+            description: "Developed a weather-tracking platform enabling farmers to optimize irrigation, processing millions of geospatial records for efficient mapping and retrieval",
             points: [
                 "Created a responsive, cross-platform interface using React Native, supporting web, iOS, and Android",
                 "Used Leaflet.js for web maps, and React Native Maps and Google Maps API on mobile to display weather layers from Google Earth Engine",
@@ -23,11 +23,11 @@ const ExperienceSection = () => {
             title: "Fullstack Developer",
             organization: "Creative Labs | Clubhouse",
             technologies: ['React', 'Next.js', 'Vercel', 'Supabase', 'TailwindCSS'],
-            description: "Worked with a 15-person team to build a website using React and Next.js to help UCLA students review and discover clubs",
+            description: "Built a website using React and Next.js to help UCLA students review and discover clubs, serving 150+ users since launch",
             link: "https://www.clubhouseucla.com/",
             points: [
-                "Helped create multiple dynamic API routes to Supabase for different queries to ensure efficient database usage",
-                "Implemented and optimized partial matching in search results, reducing loading times by 50%",
+                "Created multiple dynamic API routes to Supabase for different queries to ensure efficient database usage",
+                "Implemented and optimized partial matching in searching, reducing loading times by 50%",
                 "Collaborated with the design team and other developers to bring Hi-Fi designs to life using TailwindCSS"
             ]
         },
@@ -50,7 +50,7 @@ const ExperienceSection = () => {
             title: "Undergraduate Researcher",
             organization: "UCLA Department of Mathematics Lab",
             technologies: [],
-            description: "Collaborated with others to research the multi-armed bandit problem in reinforcement learning, submission under review at AAAI",
+            description: "Collaborated with others to research the multi-armed bandit problem in reinforcement learning",
             points: [
                 "Numerically analyzed several other UCB algorithms for their effectiveness in this setting",
                 "Designed two algorithms with an intervals approach in one and a round-robin style in the other, reaching sublinear regret in both"
@@ -65,7 +65,7 @@ const ExperienceSection = () => {
             description: "Collaborated with a small team to build an app to help Software Engineers enhance coding and interview skills",
             points: [
                 "Engineered the backend infrastructure using Spring Boot and MongoDB to manage and process user data efficiently, improving processes by 60%",
-                "Facilitated seamless communication between the backend and frontend by designing and testing a RESTful API, ensuring proper integration and data exchange for the mobile app",
+                "Wrote, tested, and optimized RESTful API endpoints using Postman, ensuring proper integration and improving loading speed by 50%",
                 "Implemented Hi-Fi designs and made UI/UX improvements on the frontend using TailwindCSS"
             ]
 

@@ -64,7 +64,7 @@ function App() {
           }}
         />
         
-        <div className="flex w-7/10 items-start px-2 sm:px-4">
+        <div className="flex w-full max-w-7xl items-start px-2 sm:px-4">
           <aside className="px-1 sm:px-2 md:px-4 py-4 w-16 sm:w-20 md:w-24 lg:w-1/7 flex-shrink-0 sticky top-24 z-50 min-w-0">
             <ul className="space-y-1 sm:space-y-2">
               {navItems.map((item: NavItem) => (

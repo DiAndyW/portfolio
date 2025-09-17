@@ -1,9 +1,20 @@
 export function Footer() {
     return (
-        <div className="flex justify-center m-20">
-            You've reached the bottom. Thanks for visiting! Check out my
-            <a href="/portfolio/assets/Andy_Wang_Resume.pdf" target="_blank" className="mx-1 text-[#AABBCC]"> resume </a>
-            if you'd like
+        <div className="flex justify-center px-4 py-8 sm:py-12 md:py-16 lg:py-20">
+            <div className="text-center text-sm sm:text-base max-w-md">
+                <p>
+                    You've reached the bottom. Thanks for visiting! Check out my
+                    <a 
+                        href="/portfolio/assets/Andy_Wang_Resume.pdf" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="mx-1 text-[#AABBCC] hover:text-[#5d97b3] transition-colors underline"
+                    > 
+                        resume 
+                    </a>
+                    if you'd like.
+                </p>
+            </div>
         </div>
     );
 }

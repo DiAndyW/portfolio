@@ -7,7 +7,7 @@ export function FriendsSection() {
         },
         {
             id: 2,
-            name: "Syrno",
+            name: "Travis (Sryno)",
             link: "https://syrno.net/",
         },
         {

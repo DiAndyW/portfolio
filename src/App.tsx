@@ -12,6 +12,95 @@ interface NavItem {
   label: string;
 }
 
+interface MobileFABNavProps {
+  navItems: NavItem[];
+  activeSection: string;
+}
+
+export const MobileFABNav = ({ navItems, activeSection }: MobileFABNavProps) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const toggleExpanded = () => {
+    setIsExpanded(!isExpanded);
+  };
+
+  const handleNavClick = (id: string) => {
+    setIsExpanded(false);
+    // Smooth scroll to section
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  return (
+    <div className="fixed top-6 left-6 z-50 md:hidden">
+      {/* Backdrop */}
+      {isExpanded && (
+        <div 
+          className="fixed inset-0 -z-10"
+          onClick={() => setIsExpanded(false)}
+        />
+      )}
+
+      {/* Main FAB Button */}
+      <button
+        onClick={toggleExpanded}
+        className={`
+          w-14 h-14 bg-[#5d97b3] text-white rounded-full shadow-lg
+          transition-all duration-300 hover:scale-110 active:scale-95
+          flex items-center justify-center mt-3
+          hover:bg-[#4a7a91] focus:outline-none focus:ring-2 focus:ring-blue-300
+          ${isExpanded ? 'rotate-0' : 'rotate-0'}
+        `}
+      >
+        {/* Menu Icon */}
+        <div className="relative w-6 h-6">
+          <div className={`absolute inset-0 transition-all duration-300 ${
+            isExpanded ? 'opacity-0 rotate-90' : 'opacity-100 rotate-0'
+          }`}>
+            <div className="w-6 h-0.5 bg-white absolute top-2 left-0 rounded"></div>
+            <div className="w-6 h-0.5 bg-white absolute top-3.5 left-0 rounded"></div>
+            <div className="w-6 h-0.5 bg-white absolute top-5 left-0 rounded"></div>
+          </div>
+          <div className={`absolute inset-0 transition-all duration-300 ${
+            isExpanded ? 'opacity-100 rotate-0' : 'opacity-0 rotate-90'
+          }`}>
+            <div className="w-6 h-0.5 bg-white absolute top-3.5 left-0 rounded rotate-45 origin-center"></div>
+            <div className="w-6 h-0.5 bg-white absolute top-3.5 left-0 rounded -rotate-45 origin-center"></div>
+          </div>
+        </div>
+      </button>
+      
+      {/* Navigation Items */}
+      <div className={`relative mt-4 transition-all duration-300 ${
+        isExpanded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
+      }`}>
+        <div className="bg-gray-700 border border-blue-300 rounded-lg p-4 space-y-3">
+          {navItems.map((item, index) => (
+            <button
+              key={item.id}
+              onClick={() => handleNavClick(item.id)}
+              className={`
+                block w-full bg-[#5d97b3] text-gray-800 px-4 py-2 rounded-full shadow-lg
+                transition-all duration-300 hover:scale-105 active:scale-95
+                text-sm font-medium whitespace-nowrap
+                transform
+                ${activeSection === item.id 
+                  ? 'bg-[#406578] text-white ring-2 ring-blue-300' 
+                  : 'hover:bg-[#33505e]'
+                }
+              `}
+              style={{
+                transitionDelay: isExpanded ? `${index * 50}ms` : '0ms'
+              }}
+            >
+              {item.label}
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 function App() {
   const [activeSection, setActiveSection] = useState<string>('about');
 
@@ -65,9 +154,9 @@ function App() {
         />
         
         <div className="flex w-full max-w-7xl items-start px-2 sm:px-4">
-          <aside className="px-1 sm:px-2 md:px-4 py-4 w-16 sm:w-20 md:w-24 lg:w-1/7 flex-shrink-0 sticky top-24 z-50 min-w-0">
+          <aside className="hidden md:block px-1 sm:px-2 md:px-4 py-4 w-16 sm:w-20 md:w-24 lg:w-1/7 flex-shrink-0 sticky top-24 z-50 min-w-0">
             <ul className="space-y-1 sm:space-y-2">
-              {navItems.map((item: NavItem) => (
+              {navItems.map((item) => (
                 <li key={item.id}>
                   <a 
                     href={`#${item.id}`}
@@ -110,6 +199,8 @@ function App() {
         </div>
       </div>
       
+      <MobileFABNav navItems={navItems} activeSection={activeSection} />
+
       <Footer />
     </div>
   );

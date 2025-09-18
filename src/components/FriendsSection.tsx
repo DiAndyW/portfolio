@@ -32,7 +32,7 @@ export function FriendsSection() {
                         <div
                             key={item.id}
                         >
-                            • <a href={item.link} className="underline text-[#AABBCC]">{item.name}</a>
+                            • <a href={item.link} className="underline text-[#5d97b3] hover:text-[#7bb3d1]">{item.name}</a>
                         </div>
                     ))}
                 </div>

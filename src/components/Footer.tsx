@@ -8,7 +8,7 @@ export function Footer() {
                         href="/portfolio/assets/Andy_Wang_Resume.pdf" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="mx-1 text-[#AABBCC] hover:text-[#5d97b3] transition-colors underline"
+                        className="mx-1 text-[#5d97b3] hover:text-[#7bb3d1] transition-colors underline"
                     > 
                         resume 
                     </a>

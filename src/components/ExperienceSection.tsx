@@ -106,7 +106,7 @@ const ExperienceSection = () => {
                         {Content.map((item) => (
                             <div key={item.id} className="relative mb-6 sm:mb-10">
                                 {/* Timeline dot */}
-                                <div className="absolute left-[5px] sm:left-3 top-5 sm:top-6 w-3 h-3 bg-blue-500 rounded-full border-2 border-white z-10"></div>
+                                <div className="absolute left-[5px] sm:left-3 top-5 sm:top-6 w-3 h-3 bg-[#7bb3d1] rounded-full border-2 border-white z-10"></div>
 
                                 <div className="ml-4 sm:ml-8">
                                     <div className="block sm:grid sm:grid-cols-6 sm:gap-4">
@@ -117,7 +117,7 @@ const ExperienceSection = () => {
                                         </div>
 
                                         {/* Description Card */}
-                                        <div className="sm:col-span-4 sm:col-end-7 border border-2 rounded-lg p-3 sm:p-4 shadow-sm hover:shadow-md hover:bg-black/30 transition-all duration-300 cursor-pointer" 
+                                        <div className="sm:col-span-4 sm:col-end-7 border border-2 border-white/30 rounded-lg p-3 sm:p-4 shadow-sm hover:shadow-md bg-[#2d4a57]/20 hover:bg-[#7bb3d1]/20 hover:border-[#7bb3d1] transition-all duration-300 cursor-pointer" 
                                             onClick={() => setSelectedItem(selectedItem === item.id ? null : item.id)}
                                         >
                                             <h3 className="font-bold mb-2 text-lg sm:text-xl">
@@ -133,7 +133,7 @@ const ExperienceSection = () => {
                                             {/* Technologies */}
                                             <div className="flex flex-wrap gap-1 sm:gap-2">
                                                 {item.technologies.map(technology => (
-                                                    <div key={technology} className="border border-2 rounded-full text-xs sm:text-sm px-2 sm:px-3 py-1">
+                                                    <div key={technology} className="border border-2 border-white/30 rounded-full text-xs sm:text-sm px-2 sm:px-3 py-1">
                                                         {technology}
                                                     </div>
                                                 ))}
@@ -161,7 +161,7 @@ const ExperienceSection = () => {
                                                             href={item.link} 
                                                             target="_blank" 
                                                             rel="noopener noreferrer"
-                                                            className="inline-block mt-2 sm:ml-4 text-xs sm:text-sm text-[#399fd4] hover:text-[#2d769c] transition-colors duration-200 underline"
+                                                            className="inline-block mt-2 sm:ml-4 text-xs sm:text-sm text-[#5d97b3] hover:text-[#7bb3d1] transition-colors duration-200 underline"
                                                             onClick={(e) => e.stopPropagation()}
                                                         >
                                                             View Project

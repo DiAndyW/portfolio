@@ -44,11 +44,11 @@ export const MobileFABNav = ({ navItems, activeSection }: MobileFABNavProps) => 
       <button
         onClick={toggleExpanded}
         className={`
-          w-14 h-14 bg-[#5d97b3] text-white rounded-full shadow-lg
+          w-14 h-14 bg-[#2d4a57]/80 text-white rounded-full shadow-lg
           transition-all duration-300 hover:scale-110 active:scale-95
           flex items-center justify-center mt-3
-          hover:bg-[#4a7a91] focus:outline-none focus:ring-2 focus:ring-blue-300
-          ${isExpanded ? 'rotate-0' : 'rotate-0'}
+          hover:bg-[#5d97b3]/80 focus:outline-none focus:ring-2 focus:ring-[#7bb3d1]
+          ${isExpanded ? 'rotate-0 bg-[#5d97b3]' : 'rotate-0'}
         `}
       >
         {/* Menu Icon */}
@@ -56,9 +56,9 @@ export const MobileFABNav = ({ navItems, activeSection }: MobileFABNavProps) => 
           <div className={`absolute inset-0 transition-all duration-300 ${
             isExpanded ? 'opacity-0 rotate-90' : 'opacity-100 rotate-0'
           }`}>
-            <div className="w-6 h-0.5 bg-white absolute top-2 left-0 rounded"></div>
-            <div className="w-6 h-0.5 bg-white absolute top-3.5 left-0 rounded"></div>
-            <div className="w-6 h-0.5 bg-white absolute top-5 left-0 rounded"></div>
+            <div className="w-6 h-0.5 bg-white absolute top-1.5 left-0 rounded"></div>
+            <div className="w-6 h-0.5 bg-white absolute top-3 left-0 rounded"></div>
+            <div className="w-6 h-0.5 bg-white absolute top-4.5 left-0 rounded"></div>
           </div>
           <div className={`absolute inset-0 transition-all duration-300 ${
             isExpanded ? 'opacity-100 rotate-0' : 'opacity-0 rotate-90'
@@ -73,18 +73,18 @@ export const MobileFABNav = ({ navItems, activeSection }: MobileFABNavProps) => 
       <div className={`relative mt-4 transition-all duration-300 ${
         isExpanded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
       }`}>
-        <div className="bg-gray-700 border border-blue-300 rounded-lg p-4 space-y-3">
+        <div className="bg-gray-800 border border-[#7bb3d1] rounded-lg p-4 space-y-3">
           {navItems.map((item, index) => (
             <button
               key={item.id}
               onClick={() => handleNavClick(item.id)}
               className={`
-                block w-full bg-[#5d97b3] text-gray-800 px-4 py-2 rounded-full shadow-lg
+                block w-full bg-[#2d4a57]/20 text-white px-4 py-2 rounded-full shadow-lg
                 transition-all duration-300 hover:scale-105 active:scale-95
                 text-sm font-medium whitespace-nowrap
                 transform
                 ${activeSection === item.id 
-                  ? 'bg-[#406578] text-white ring-2 ring-blue-300' 
+                  ? 'bg-[#5d97b3] text-white ring-2 ring-[#7bb3d1]' 
                   : 'hover:bg-[#33505e]'
                 }
               `}

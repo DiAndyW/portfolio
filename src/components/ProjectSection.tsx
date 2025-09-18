@@ -53,7 +53,7 @@ const ProjectSection = () => {
                     {Content.map((item) => (
                         <div 
                             key={item.id} 
-                            className="bg-transparent border border-2 rounded-lg my-4 sm:my-6 lg:my-8 p-3 sm:p-4 shadow-sm hover:shadow-md hover:bg-black/30 transition-all duration-300 cursor-pointer"
+                            className="bg-[#2d4a57]/20 hover:bg-[#7bb3d1]/20 border border-2 border-white/30 rounded-lg my-4 sm:my-6 lg:my-8 p-3 sm:p-4 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer hover:border-[#7bb3d1]"
                             onClick={() => setSelectedItem(selectedItem === item.id ? null : item.id)}
                         >
                             {/* Header */}
@@ -111,10 +111,10 @@ const ProjectSection = () => {
                                             href={item.link} 
                                             target="_blank" 
                                             rel="noopener noreferrer"
-                                            className="inline-flex items-center text-xs sm:text-sm text-[#399fd4] hover:text-blue-800 font-medium transition-colors duration-200"
+                                            className="inline-flex items-center text-xs sm:text-sm text-[#5d97b3] hover:text-[#7bb3d1] font-medium transition-colors duration-200 underline"
                                             onClick={(e) => e.stopPropagation()}
                                         >
-                                            View Project →
+                                            View Project
                                         </a>
                                     )}
                                 </div>

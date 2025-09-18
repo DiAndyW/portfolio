@@ -11,7 +11,7 @@ export function Header() {
                         <div className="col-span-6">
                             <button 
                                 onClick={scrollToTop}
-                                className="text-3xl font-medium text-white hover:text-blue-300 transition-colors bg-transparent border-none cursor-pointer"
+                                className="text-3xl font-medium text-white hover:text-[#7bb3d1] transition-colors bg-transparent border-none cursor-pointer"
                             >
                                 Andy Wang
                             </button>

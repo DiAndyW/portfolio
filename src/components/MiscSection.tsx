@@ -66,7 +66,7 @@ const MiscSection: React.FC = () => {
                 facts: [
                     "Laufey - A Matter of Time",
                     "keshi - WANTCHU",
-                    "d4vd - Sleep Well",
+                    "The Marias - Lejos de Ti",
                     "HUNTR/X - Golden"
                 ]
             }

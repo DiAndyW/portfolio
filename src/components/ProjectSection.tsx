@@ -44,12 +44,91 @@ const ProjectSection = () => {
 
     return (
         <div className="flex items-center">
-            <div className="mt-8 font-normal">
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl p-2 sm:p-4 mb-6 sm:mb-8">
-                    Projects
-                </h1>
-                
-                <div className="flex-row gap-4 sm:gap-6 px-4">
+        <div className="mt-8 font-normal">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl p-2 sm:p-4 mb-6 sm:mb-8">
+                Projects
+            </h1>
+            
+            <div className="px-4">
+                {/* Mobile Layout */}
+                <div className="block sm:hidden space-y-3">
+                    {Content.map((item) => (
+                        <div key={item.id} className="border border-2 border-white/30 rounded-lg overflow-hidden">
+                            <div 
+                                className="bg-[#2d4a57]/20 hover:bg-[#7bb3d1]/20 transition-colors duration-300 p-3 cursor-pointer"
+                                onClick={() => setSelectedItem(selectedItem === item.id ? null : item.id)}
+                            >
+                                <div className="flex justify-between items-start">
+                                    {/* Always visible */}
+                                    <div className="flex-1 mr-3">
+                                        <h3 className="font-bold text-base text-white mb-1">
+                                            {item.title}
+                                        </h3>
+                                        {item.organization && (
+                                            <h4 className="font-semibold text-[#5d97b3] text-sm mb-2">
+                                                {item.organization}
+                                            </h4>
+                                        )}
+                                        <p className="text-white leading-relaxed text-sm mb-1">
+                                            {item.description}
+                                        </p>
+                                    </div>
+
+                                    {/* Expand/Collapse indicator */}
+                                    <div className="text-gray-400 text-lg font-light flex-shrink-0">
+                                        {selectedItem === item.id ? '−' : '+'}
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            {/* Expandable content */}
+                            <div 
+                                className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                                    selectedItem === item.id 
+                                        ? 'max-h-96 opacity-100' 
+                                        : 'max-h-0 opacity-0'                               
+                                }`}
+                            >
+                                <div className="p-3 bg-[#2d4a57]/10 border-t border-white/20">
+                                    <div className="space-y-1 mb-3">
+                                        {item.points.map((point, index) => (
+                                            <div key={index} className="text-xs text-white flex items-start">
+                                                <span className="pr-2 text-[#7bb3d1] flex-shrink-0">•</span>
+                                                <span className="text-gray-300">{point}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                    
+                                    {/* Technologies */}
+                                    <div className="flex flex-wrap gap-1">
+                                        {item.technologies.map((technology, index) => (
+                                            <span 
+                                                key={index}
+                                                className="text-white border border-2 border-white/30 rounded-full text-xs px-2 py-1"
+                                            >
+                                                {technology}
+                                            </span>
+                                        ))}
+                                    </div>
+
+                                    {item.link && (
+                                        <a 
+                                            href={item.link} 
+                                            target="_blank" 
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center text-xs text-[#5d97b3] hover:text-[#7bb3d1] font-medium transition-colors duration-200 underline"
+                                        >
+                                            View Project
+                                        </a>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Desktop Layout */}
+                <div className="hidden sm:block flex-row gap-4 sm:gap-6">
                     {Content.map((item) => (
                         <div 
                             key={item.id} 
@@ -100,7 +179,7 @@ const ProjectSection = () => {
                                     <div className="space-y-2 mb-3 sm:mb-4">
                                         {item.points.map((point, index) => (
                                             <div key={index} className="text-xs sm:text-sm text-white flex items-start">
-                                                <span className="text-white pr-2">•</span>
+                                                <span className="pr-2 text-[#7bb3d1]">•</span>
                                                 <span>{point}</span>
                                             </div>
                                         ))}
@@ -124,6 +203,7 @@ const ProjectSection = () => {
                 </div>
             </div>
         </div>
+    </div>
     );
 }
 

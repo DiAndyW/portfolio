@@ -9,12 +9,12 @@ const ExperienceSection = () => {
             time: "June 2025 - Present",
             title: "Frontend Developer",
             organization: "UCLA Department of Civil Engineering",
-            technologies: ['React Native', 'Leaflet.js', 'Google Maps API', 'Firebase', 'Expo'],
+            technologies: ['React Native', 'Leaflet.js', 'Google Maps API', 'FastAPI', 'Firebase', 'Supabase'],
             description: "Developed a weather-tracking platform enabling farmers to optimize irrigation, processing millions of geospatial records for efficient mapping and retrieval",
             points: [
                 "Created a responsive, cross-platform interface using React Native, supporting web, iOS, and Android",
-                "Used Leaflet.js for web maps, and React Native Maps and Google Maps API on mobile to display weather layers from Google Earth Engine",
-                "Cached weather data in Firebase for high-traffic areas, improving processing speeds by 60%"
+                "Used Leaflet.js for web maps, and React Native Maps and Google Maps API on mobile to display weather data; managed user data with Firebase",
+                "Made a FastAPI backend storing geospatial data in Supabase with local caching, improving speeds by 60%"
             ]
         },
         {
@@ -86,14 +86,82 @@ const ExperienceSection = () => {
     ]
 
     return (
-    <div className="flex items-center">
+        <div className="flex items-center">
         <div className="mt-8 font-normal">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl p-2 sm:p-4">
                 Experience
             </h1>
             <h2 className="p-2 sm:p-4">
                 <div className="max-w-4xl mx-auto p-3 sm:p-6">
-                    <div className="relative">
+                    {/* Mobile Layout */}
+                    <div className="block sm:hidden space-y-3">
+                        {Content.map((item) => (
+                            <div key={item.id} className="border border-2 border-white/30 rounded-lg overflow-hidden">
+                                <button
+                                    onClick={() => setSelectedItem(selectedItem === item.id ? null : item.id)}
+                                    className="w-full p-3 text-left bg-[#2d4a57]/20 hover:bg-[#7bb3d1]/20 transition-colors duration-300 cursor-pointer"
+                                >
+                                    <div className="flex justify-between items-center">
+                                        <div className="flex-1">
+                                            <h3 className="font-bold text-base text-white mb-1">{item.title}</h3>
+                                            <p className="text-[#5d97b3] text-sm font-medium">{item.organization}</p>
+                                        </div>
+                                        <div className="text-right ml-3">
+                                            <span className="text-xs text-gray-300 block mb-1">{item.time}</span>
+                                            <div className="text-gray-400 text-lg font-light">
+                                                {selectedItem === item.id ? '−' : '+'}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <p className="text-gray-300 text-sm mb-1 mt-2 leading-relaxed">{item.description}</p>
+                                </button>
+                                
+                                <div 
+                                    className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                                        selectedItem === item.id 
+                                            ? 'max-h-96 opacity-100' 
+                                            : 'max-h-0 opacity-0'
+                                    }`}
+                                >
+                                    <div className="p-3 bg-[#2d4a57]/10 border-t border-white/20">
+                                        {/* Extended description points */}
+                                        <div className="space-y-1 mb-3">
+                                            {item.points.map((point, index) => (
+                                                <div key={index} className="text-xs flex leading-relaxed">
+                                                    <span className="pr-2 flex-shrink-0 text-[#7bb3d1]">•</span>
+                                                    <span className="text-gray-300">{point}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+
+                                        {/* Technologies */}
+                                        <div className="flex flex-wrap gap-1">
+                                            {item.technologies.map(technology => (
+                                                <div key={technology} className="border border-2 border-white/30 rounded-full text-xs px-2 py-1">
+                                                    {technology}
+                                                </div>
+                                            ))}
+                                        </div>
+                                        
+                                        {item.link && (
+                                            <a 
+                                                href={item.link} 
+                                                target="_blank" 
+                                                rel="noopener noreferrer"
+                                                className="inline-block text-xs text-[#5d97b3] hover:text-[#7bb3d1] transition-colors duration-200 underline"
+                                            >
+                                                View Project
+                                            </a>
+                                        )}
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Desktop Layout */}
+                    <div className="hidden sm:block relative">
                         {/* Extended timeline line */}
                         <div className="absolute top-0 left-2 sm:left-4 bottom-0 w-0.5 bg-gradient-to-b from-gray-300 via-gray-300 via-85% to-transparent"></div>
 
@@ -151,7 +219,7 @@ const ExperienceSection = () => {
                                                     <div className="border-t my-3 sm:my-4"></div>
                                                     {item.points.map((point, index) => (
                                                         <div key={index} className="text-xs sm:text-sm flex mb-1 leading-relaxed">
-                                                            <span className="pr-2 flex-shrink-0">•</span>
+                                                            <span className="pr-2 flex-shrink-0 text-[#7bb3d1]">•</span>
                                                             <span>{point}</span>
                                                         </div>
                                                     ))}

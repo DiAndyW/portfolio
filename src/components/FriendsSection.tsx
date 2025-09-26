@@ -15,6 +15,21 @@ export function FriendsSection() {
             name: "Homan Qiu",
             link: "https://i-am.fish/",
         },
+        {
+            id: 4,
+            name: "Charlton Shih",
+            link: "https://chewton2k.github.io/Portfolio/",
+        },
+        {
+            id: 5,
+            name: "Erica Huang",
+            link: "https://kittenluv1.com/",
+        },
+        {
+            id: 6,
+            name: "Kenny Guo",
+            link: "https://kguo12.github.io/kennyguowebpage/",
+        }
     ]
 
     return (

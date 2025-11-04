@@ -7,28 +7,27 @@ const ExperienceSection = () => {
         {
             id: 1,
             time: "June 2025 - Present",
-            title: "Frontend Developer",
+            title: "Software Engineer",
             organization: "UCLA Department of Civil Engineering",
             technologies: ['React Native', 'Leaflet.js', 'Google Maps API', 'FastAPI', 'Firebase', 'Supabase'],
-            description: "Developed a weather-tracking platform enabling farmers to optimize irrigation, processing millions of geospatial records for efficient mapping and retrieval",
+            description: "Built a weather-tracking platform enabling farmers to optimize irrigation through automated field analysis and forecasting crop water demand, providing future irrigation recommendations",
             points: [
-                "Created a responsive, cross-platform interface using React Native, supporting web, iOS, and Android",
-                "Used Leaflet.js for web maps, and React Native Maps and Google Maps API on mobile to display weather data; managed user data with Firebase",
-                "Made a FastAPI backend storing geospatial data in Supabase with local caching, improving speeds by 60%"
+                "Processed geospatial datasets to predict soil composition and crop information, reducing user data entry time by 30%",
+                "Created a responsive, cross-platform interface with React Native (web, iOS, Android), utilizing Leaflet.js and Google Maps API for map visualization",
+                "Built a FastAPI backend using Supabase and Firebase for storage and caching, improving query speeds by 60%"
             ]
         },
         {
             id: 2,
             time: "Mar 2025 - Present",
-            title: "Fullstack Developer",
-            organization: "Creative Labs | Clubhouse",
+            title: "Lead Fullstack Developer",
+            organization: "Clubhouse",
             technologies: ['React', 'Next.js', 'Vercel', 'Supabase', 'TailwindCSS'],
-            description: "Built a website using React and Next.js to help UCLA students review and discover clubs, serving 150+ users since launch",
+            description: "Developed a Next.js website helping UCLA students review and discover clubs, serving 150+ users since launch",
             link: "https://www.clubhouseucla.com/",
             points: [
-                "Created multiple dynamic API routes to Supabase for different queries to ensure efficient database usage",
-                "Implemented and optimized partial matching in searching, reducing loading times by 50%",
-                "Collaborated with the design team and other developers to bring Hi-Fi designs to life using TailwindCSS"
+                "Built dynamic API routes and optimized query logic to Supabase, improving search efficiency and reducing loading times by 50%",
+                "Led a team of 8 developers, conducting weekly meetings to delegate tasks, troubleshoot blockers, coordinated with the design team on UI implementation, and oversaw CI/CD pipeline integration"
             ]
         },
         {
@@ -50,10 +49,10 @@ const ExperienceSection = () => {
             title: "Undergraduate Researcher",
             organization: "UCLA Department of Mathematics Lab",
             technologies: [],
-            description: "Collaborated with others to research the multi-armed bandit problem in reinforcement learning",
+            description: "Researched multi-agent reinforcement learning under information asymmetry, extending the DCM bandit model to support multiple clicks per session",
             points: [
-                "Numerically analyzed several other UCB algorithms for their effectiveness in this setting",
-                "Designed two algorithms with an intervals approach in one and a round-robin style in the other, reaching sublinear regret in both"
+                "Designed and analyzed decentralized algorithms achieving sublinear regret in action and reward-asymmetric settings",
+                "Conducted 100,000+ simulations to benchmark against UCB variants, validating theoretical bounds and matching or outperforming existing baselines"
             ]
         },
         {
@@ -62,11 +61,10 @@ const ExperienceSection = () => {
             title: "Fullstack Developer",
             organization: "Creative Labs | Algoace",
             technologies: ['React Native', 'Java', 'Spring Boot', 'MongoDB', 'TailwindCSS'],
-            description: "Collaborated with a small team to build an app to help Software Engineers enhance coding and interview skills",
+            description: "Collaborated with a 15 person team to build a gamified coding app helping software engineers enhance technical skills",
             points: [
-                "Engineered the backend infrastructure using Spring Boot and MongoDB to manage and process user data efficiently, improving processes by 60%",
-                "Wrote, tested, and optimized RESTful API endpoints using Postman, ensuring proper integration and improving loading speed by 50%",
-                "Implemented Hi-Fi designs and made UI/UX improvements on the frontend using TailwindCSS"
+                "Built and optimized RESTful API with Spring Boot and MongoDB for user data management and processing, improving loading speeds by 50%",
+                "Developed responsive React Native frontend with TailwindCSS based on designer specifications",
             ]
 
         },

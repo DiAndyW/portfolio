@@ -24,6 +24,9 @@ export function Header() {
                             <a href='https://www.linkedin.com/in/di-xuan-wang/' className="p-2 hover:bg-white/10 rounded-lg transition-colors">
                                 <img src='/portfolio/assets/InBug-White.png' className="w-9" alt="LinkedIn" />
                             </a>
+                            <a href='/portfolio/assets/Andy_Wang_Resume.pdf' className="p-2 hover:bg-white/10 rounded-lg transition-colors">
+                                <img src='/portfolio/assets/icons-resume.png' alt='Resume' className="w-9" />
+                            </a>
                             <a href='mailto:andy.dxwang@gmail.com' className="p-2 hover:bg-white/10 rounded-lg transition-colors">
                                 <img src='/portfolio/assets/mail-svgrepo-com.svg' alt='Email' className="w-9" />
                             </a>

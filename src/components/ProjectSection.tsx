@@ -24,8 +24,8 @@ const ProjectSection = () => {
             description: "Created a code-interview website that helps detect cheating using AI, allowing companies to find the truly talented",
             link: "https://devpost.com/software/realcoder",
             points: [
-                "Made a responsive website using React and Node.js allowing interviews to be conducted directly on the website",
-                "Prompt engineered Google Gemini models to analyze video, audio, and code for suspicious behavior, providing helpful feedback and follow up questions for interviewers"
+                "Made a responsive website using React, Node.js, and WebSockets, allowing for real time interviews",
+                "Used Google Gemini to analyze video, audio, and code for suspicious behavior, providing helpful feedback and follow-up questions for interviewers"
             ]
         },
         {
@@ -34,10 +34,10 @@ const ProjectSection = () => {
             title: "Temple of Doom",
             organization: "",
             technologies: ['C++'],
-            description: "Designed and developed a 2D dungeon-style game inspired by classic arcade games",
+            description: "Designed and developed a 2D dungeon-style game using C++ inspired by classic arcade games",
             points: [
-                "Optimized recursive algorithms for smart enemy movement, improving processing times by 70%",
-                "Implemented real-time map rendering and random map generation, enhancing gameplay responsiveness",
+                "Optimized recursive algorithms for enemy movement, improving processing times by 70% for a smoother experience",
+                "Implemented real-time map rendering and random map generation, enhancing gameplay variability",
             ]
         },
     ]

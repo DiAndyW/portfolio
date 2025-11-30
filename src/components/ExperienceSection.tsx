@@ -12,22 +12,22 @@ const ExperienceSection = () => {
             technologies: ['React Native', 'Leaflet.js', 'Google Maps API', 'FastAPI', 'Firebase', 'Supabase'],
             description: "Built a weather-tracking platform enabling farmers to optimize irrigation through automated field analysis and forecasting crop water demand, providing future irrigation recommendations",
             points: [
-                "Processed geospatial datasets to predict soil composition and crop information, reducing user data entry time by 30%",
-                "Created a responsive, cross-platform interface with React Native (web, iOS, Android), utilizing Leaflet.js and Google Maps API for map visualization",
-                "Built a FastAPI backend using Supabase and Firebase for storage and caching, improving query speeds by 60%"
+                "Utilized Google Earth Engine to predict soil and crop information, reducing manual data entry time by 30%",
+                "Created a responsive, cross-platform interface with React Native, Leaflet.js and Google Maps API",
+                "Architected a FastAPI backend using Supabase as a lookup table for chunked parcel data stored in Cloudflare R2, used Firebase for user authentication, and implemented query caching, improving retrieval speeds by 60%"
             ]
         },
         {
             id: 2,
             time: "Mar 2025 - Present",
             title: "Lead Fullstack Developer",
-            organization: "Clubhouse",
+            organization: "ClubhouseUCLA",
             technologies: ['React', 'Next.js', 'Vercel', 'Supabase', 'TailwindCSS'],
-            description: "Developed a Next.js website helping UCLA students review and discover clubs, serving 150+ users since launch",
+            description: "Built a website using Next.js and Vercel, helping students review and discover clubs, serving 500+ monthly users",
             link: "https://www.clubhouseucla.com/",
             points: [
-                "Built dynamic API routes and optimized query logic to Supabase, improving search efficiency and reducing loading times by 50%",
-                "Led a team of 8 developers, conducting weekly meetings to delegate tasks, troubleshoot blockers, coordinated with the design team on UI implementation, and oversaw CI/CD pipeline integration"
+                "Built dynamic API routes and optimized query logic to Supabase, reducing page loading times by 50%",
+                "Led a team of 8 developers to develop new website features, conducting weekly meetings to delegate tasks, troubleshoot blockers, coordinated with the design team on UI implementation, and oversaw CI/CD pipeline integration"
             ]
         },
         {
@@ -51,8 +51,8 @@ const ExperienceSection = () => {
             technologies: [],
             description: "Researched multi-agent reinforcement learning under information asymmetry, extending the DCM bandit model to support multiple clicks per session",
             points: [
-                "Designed and analyzed decentralized algorithms achieving sublinear regret in action and reward-asymmetric settings",
-                "Conducted 100,000+ simulations to benchmark against UCB variants, validating theoretical bounds and matching or outperforming existing baselines"
+                "Designed and analyzed algorithms achieving sublinear regret in action and reward-asymmetric settings",
+                "Conducted 100,000+ simulations in Python to benchmark against UCB variants, validating theoretical bounds and matching or outperforming existing baselines"
             ]
         },
         {
@@ -61,9 +61,9 @@ const ExperienceSection = () => {
             title: "Fullstack Developer",
             organization: "Creative Labs | Algoace",
             technologies: ['React Native', 'Java', 'Spring Boot', 'MongoDB', 'TailwindCSS'],
-            description: "Collaborated with a 15 person team to build a gamified coding app helping software engineers enhance technical skills",
+            description: "Worked with a 15 person team to build a gamified coding app helping software engineers enhance technical skills",
             points: [
-                "Built and optimized RESTful API with Spring Boot and MongoDB for user data management and processing, improving loading speeds by 50%",
+                "Built and optimized RESTful API with Spring Boot and MongoDB for JWT-based authentication and role-based access control, improving loading speeds by 50%",
                 "Developed responsive React Native frontend with TailwindCSS based on designer specifications",
             ]
 

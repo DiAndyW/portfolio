@@ -6,6 +6,17 @@ const ProjectSection = () => {
     const Content = [
         {
             id: 1,
+            title: "Bloon Tower Defense Training Camp",
+            technologies: ['Three.js', 'Blender'],
+            description: "Created a 3D first-person shooter aim trainer inspired by Balloon Towers Defense and Aim Labs.",
+            link: "https://github.com/DiAndyW/174a-project",
+            points: [
+                "Overhauled balloon movement and added settings, allowing for more customizable gameplay",
+                "Created custom assets for various objects in game, improving game quality and completeness",
+            ]
+        },
+        {
+            id: 2,
             title: "Morii",
             technologies: ['Swift', 'Express.js', 'Node.js', 'MongoDB'],
             description: "Collaborated on a social media app designed to promote emotional awareness and authentic self-expression",
@@ -16,7 +27,7 @@ const ProjectSection = () => {
             ]
         },
         {
-            id: 2,
+            id: 3,
             // time: "Apr 2025",
             title: "True Talent",
             organization: "LAHacks 2025",
@@ -29,7 +40,7 @@ const ProjectSection = () => {
             ]
         },
         {
-            id: 3,
+            id: 4,
             // time: "Jan 2024 - Jun 2024",
             title: "Temple of Doom",
             organization: "",

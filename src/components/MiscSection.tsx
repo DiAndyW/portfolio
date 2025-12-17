@@ -65,9 +65,9 @@ const MiscSection: React.FC = () => {
                 title: "Can't get 'em out of my head!",
                 facts: [
                     "Laufey - A Matter of Time",
-                    "keshi - WANTCHU",
-                    "The Marias - Lejos de Ti",
-                    "HUNTR/X - Golden"
+                    "Daniel Caeser - Who Knows",
+                    "Hu Xia - 那些年",
+                    "YOASOBI - 海のまにまに"
                 ]
             }
         }
